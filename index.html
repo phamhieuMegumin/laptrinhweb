@@ -34,35 +34,35 @@
         <form>
           <div class="input-container">
             <div class="input-field">
-              <label>Username</label>
-              <input type="text" placeholder="Username" />
+              <label for="name">Username</label>
+              <input type="text" placeholder="Username" id="name" />
             </div>
             <div class="input-field">
-              <label>Password</label>
-              <input type="password" placeholder="Password" />
+              <label for="password">Password</label>
+              <input type="password" placeholder="Password" id="password" />
             </div>
             <div class="input-field">
-              <label>Email</label>
-              <input type="text" placeholder="Email" />
+              <label for="email">Email</label>
+              <input type="text" placeholder="Email" id="email" />
             </div>
             <div class="input-field">
-              <label>Ngày sinh</label>
-              <input type="date" placeholder="ngày sinh" />
+              <label for="datetime">Ngày sinh</label>
+              <input id="datetime" type="date" placeholder="ngày sinh" />
             </div>
             <div class="input-field">
-              <label>Giới tính</label>
+              <label for="gender">Giới tính</label>
               <input type="radio" placeholder="ngày sinh" name="gender" />
               <span>Nam</span>
               <input type="radio" placeholder="ngày sinh" name="gender" />
               <span>Nữ</span>
             </div>
             <div class="input-field">
-              <label>Tỉnh/Thành phố</label>
-              <input type="text" placeholder="Tỉnh/Thành phố" />
+              <label for="city">Tỉnh/Thành phố</label>
+              <input id="city" type="text" placeholder="Tỉnh/Thành phố" />
             </div>
             <div class="input-field">
-              <label>Sở thích</label>
-              <input type="text" placeholder="Sở thích" />
+              <label for="favorite">Sở thích</label>
+              <input id="favorite" type="text" placeholder="Sở thích" />
             </div>
             <div class="btn-container">
               <button>Submit</button>
@@ -92,7 +92,7 @@
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
           ></iframe>
         </div>
-        <div class="footer"></div>
+        <div class="footer">Footer</div>
       </div>
     </div>
     <!-- Messenger Plugin chat Code -->
@@ -194,6 +194,15 @@
     }
     .input-field + .input-field {
       margin-top: 10px;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: #262626;
+      color: #fff;
     }
   </style>
 </html>
