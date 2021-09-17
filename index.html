@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0"
+      nonce="kg2ygkOD"
+    ></script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div class="container">
+      <div class="header">
+        <ul class="navBar">
+          <li>Home</li>
+          <li>Contact</li>
+          <li>User</li>
+          <li>More</li>
+        </ul>
+      </div>
+      <div class="sidebar">
+        <div>Link 1</div>
+        <div>Link 2</div>
+        <div>Link 3</div>
+        <div>Link 4</div>
+      </div>
+      <div class="content">
+        <form>
+          <div class="input-container">
+            <div class="input-field">
+              <label>Username</label>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <label>Password</label>
+              <input type="password" placeholder="Password" />
+            </div>
+            <div class="input-field">
+              <label>Email</label>
+              <input type="text" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <label>Ngày sinh</label>
+              <input type="date" placeholder="ngày sinh" />
+            </div>
+            <div class="input-field">
+              <label>Giới tính</label>
+              <input type="radio" placeholder="ngày sinh" name="gender" />
+              <span>Nam</span>
+              <input type="radio" placeholder="ngày sinh" name="gender" />
+              <span>Nữ</span>
+            </div>
+            <div class="input-field">
+              <label>Tỉnh/Thành phố</label>
+              <input type="text" placeholder="Tỉnh/Thành phố" />
+            </div>
+            <div class="input-field">
+              <label>Sở thích</label>
+              <input type="text" placeholder="Sở thích" />
+            </div>
+            <div class="btn-container">
+              <button>Submit</button>
+              <button>Reset</button>
+            </div>
+          </div>
+        </form>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d251637.95196238213!2d105.6189045!3d9.779349!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1631861695462!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="facebook">
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            width="340"
+            height="500"
+            style="border: none; overflow: hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+        </div>
+        <div class="footer"></div>
+      </div>
+    </div>
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "296479737453630");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v12.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+  </body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    .header {
+      background: #262626;
+      height: 64px;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+    .navBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
+    .navBar > li {
+      font-size: 18px;
+      color: #fff;
+      line-height: 64px;
+      cursor: pointer;
+      display: block;
+    }
+    .navBar > li:hover {
+      color: #2879fe;
+    }
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 64px;
+      bottom: 0;
+      width: 128px;
+      background-color: #262626f3;
+    }
+    .sidebar div {
+      height: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .content {
+      position: relative;
+      top: 64px;
+      left: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      flex-direction: column;
+    }
+    .input-field {
+      display: flex;
+      align-items: center;
+    }
+    .input-field input {
+      width: 200px;
+      border: 1px solid #262626;
+      outline: none;
+      margin-left: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .input-field + .input-field {
+      margin-top: 10px;
+    }
+  </style>
+</html>
